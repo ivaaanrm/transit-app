@@ -1,0 +1,53 @@
+.incident-card {
+    background-color: #fefefe;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .incident-card:hover {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .incident-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .incident-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .incident-level-good {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #1c8f0b;
+    color: #fff;
+  }
+
+  .incident-level {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #f0ad4e;
+    color: #fff;
+  }
+  .incident-level_bad {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #f0ad4e;
+    color: #fff;
+  }
+  
+  .incident-duration {
+    font-size: 12px;
+    color: #777;
+  }
+  

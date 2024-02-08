@@ -1,0 +1,23 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'incident_card.css' %}" type="text/css" />
+
+
+<h1>Incidencias</h1>
+<div class="row">
+  {% for incidencia in incidencias %}
+  <div class="col-md-4">
+    <div class="card mb-2 incident-card">
+      <div class="card-body">
+        <h5 class="card-title">{{ incidencia.via }}</h5>
+        <p class="card-text">{{ incidencia.causa }}</p>
+        <div class="incident-details">
+          <span class="incident-level-good">{{ incidencia.level }}</span>
+          <span class="incident-duration">{{ incidencia.longitud }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% endfor %}
+</div>

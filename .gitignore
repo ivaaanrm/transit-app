@@ -1,0 +1,36 @@
+# Ignore virtual environment and other Python-specific files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore build and package artifacts
+build/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheel/
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+.pytest_cache/
+.coverage*
+
+# Ignore test database and user-specific settings
+db.sqlite3
+db.sqlite3-journal
+local_settings.py
+
+# Ignore logs and temporary files
+*.log
+*.pot
+*.swp
+tmp/
+
+
+.env
+data/
