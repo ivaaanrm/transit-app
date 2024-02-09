@@ -16,4 +16,4 @@ crawler:
 
 app:
   api_url: "http://localhost:8001/create-incidencias/"
-  interval: 1
+  interval: 5

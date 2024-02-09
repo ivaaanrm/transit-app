@@ -4,7 +4,7 @@ from dataclasses import asdict, dataclass, field
 @dataclass(frozen=True)
 class Incidencia:
     causa: str
-    zona: str
+    nivel: str
     via: str
     km_inicio_fin: str
     longitud: str
@@ -13,10 +13,6 @@ class Incidencia:
     direccion: str
     inicio: str
     observaciones: str
-    
-    @property
-    def nivel(self):
-        return 1
     
     def to_dict(self):
         return asdict(self)

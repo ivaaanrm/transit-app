@@ -57,9 +57,7 @@ def setup_logging():
 
 
 def post_incidencias(data: List[Dict[str, str]]) ->  requests.Response:
-    headers = {"Content-Type": "application/json"}
-    
-    print(params.API_URL)
+    headers = {"Content-Type": "application/json"}    
     response = requests.post(params.API_URL, headers=headers, data=json.dumps(data))
 
     if response.status_code == 201:
@@ -124,7 +122,7 @@ class TransitCrawler:
                     
                     resultado = Incidencia(
                         causa = columns[0].text.strip(),
-                        zona = columns[1].text.strip(),
+                        nivel = columns[1].text.strip(),
                         via = columns[2].find('div').text.strip(),
                         km_inicio_fin = columns[2].find_all('div')[1].text.strip(),
                         longitud = columns[3].find('div').text.strip(),
@@ -186,12 +184,9 @@ async def main():
     if set(previous_results) == set(resultados):
         logging.info("No hay cambios")
         return
-    
-    print(resultados)
-    
-    
+        
     response = post_incidencias([incidencia.to_dict() for incidencia in resultados])
-    
+    print(resultados)
     
     previous_results = resultados    
 

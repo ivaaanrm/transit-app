@@ -2,7 +2,7 @@ from django.db import models
 
 class Incidencia(models.Model):
     causa = models.CharField(max_length=100)
-    zona = models.CharField(max_length=100)
+    nivel = models.CharField(max_length=100)
     via = models.CharField(max_length=100)
     km_inicio_fin = models.CharField(max_length=50)
     longitud = models.CharField(max_length=50)

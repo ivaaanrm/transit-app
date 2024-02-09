@@ -11,8 +11,8 @@ def test_create_incidencias():
     # Example data (modify as needed)
     data = [
       {
-        'causa': 'Senyalització vertical',
-        'zona': 'Calçada restringida',
+        'causa': 'Accident',
+        'nivel': 'Calçada restringida',
         'via': 'AP-7',
         'km_inicio_fin': '146,00 - 149,00',
         'longitud': '3,00',
@@ -23,17 +23,32 @@ def test_create_incidencias():
         'observaciones': ''
     },
     {
-        'causa': "Treballs d'enllumenat",
-        'zona': 'Calçada tallada',
-        'via': 'B-20',
-        'km_inicio_fin': '6,50 - 8,00',
-        'longitud': '1,50',
-        'demarcacion': 'Barcelona',
-        'tramo': 'BARCELONA',
-        'direccion': 'DESVIAMENTS PER SORTIDA 9',
-        'inicio': '01:24',
-        'observaciones': 'NOCTURN 23H A 5H'
-    }
+    'causa': 'circulació',
+    'nivel': 'Calçada restringida',
+    'via': 'AP-7',
+    'km_inicio_fin': '146,00 - 149,00',
+    'longitud': '3,00',
+    'demarcacion': 'Barcelona',
+    'tramo': 'BARBERÀ DEL VALLÈS',
+    'direccion': '',
+    'inicio': '22:00',
+    'observaciones': ''
+},
+
+    {
+    'causa': 'obras',
+    'nivel': 'Calçada restringida',
+    'via': 'AP-7',
+    'km_inicio_fin': '146,00 - 149,00',
+    'longitud': '3,00',
+    'demarcacion': 'Barcelona',
+    'tramo': 'BARBERÀ DEL VALLÈS',
+    'direccion': '',
+    'inicio': '22:00',
+    'observaciones': ''
+},
+
+      
     ]
 
     response = requests.post(url, headers=headers, data=json.dumps(data))

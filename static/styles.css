@@ -1,0 +1,11 @@
+:root {
+    --main-bg-color: #F7F7F7;
+    --primary-text-color: #393E46;
+    --light-bg: #EEEEEE;
+    --light-text: #393E46;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--light-text);
+}
