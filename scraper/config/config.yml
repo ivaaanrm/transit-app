@@ -15,5 +15,5 @@ crawler:
   obras: true
 
 app:
-  api_url: "http://localhost:8001/create-incidencias/"
+  api_url: "http://localhost:8000/create-incidencias/"
   interval: 5

@@ -184,11 +184,9 @@ async def main():
     if set(previous_results) == set(resultados):
         logging.info("No hay cambios")
         return
-        
-    response = post_incidencias([incidencia.to_dict() for incidencia in resultados])
-    print(resultados)
     
     previous_results = resultados    
+    response = post_incidencias([incidencia.to_dict() for incidencia in resultados])    
 
     
     
@@ -200,11 +198,11 @@ if __name__ == "__main__":
     setup_logging()
     asyncio.run(main())
 
-    # schedule.every(params.INTERVALO).minutes.do(job)
+    schedule.every(params.INTERVALO).minutes.do(job)
 
-    # while True:
-    #     schedule.run_pending()
-    #     time.sleep(1)
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
 
 
 
