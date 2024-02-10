@@ -10,12 +10,12 @@ from rest_framework import status
 from .models import Incidencia
 
 
+
 class HomeView(TemplateView):
     template_name = 'pages/home.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # context["incidencias"] = Incidencia.objects.all()
         visible_incidencias = Incidencia.objects.filter(visible=True)
         context["incidencias"] = visible_incidencias
         return context
